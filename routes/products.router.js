@@ -2,21 +2,21 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 
-// Archivo donde se guardan los productos
+
 const productsFile = "data/productos.json";
 
-// Función para leer productos del archivo
+
 const getProducts = () => {
     const data = fs.readFileSync(productsFile, "utf-8");
     return JSON.parse(data);
 };
 
-// Función para escribir productos en el archivo
+
 const saveProducts = (products) => {
     fs.writeFileSync(productsFile, JSON.stringify(products, null, 2));
 };
 
-// Ruta GET: Obtener todos los productos
+
 router.get("/", (req, res) => {
     const products = getProducts();
     const limit = req.query.limit;
@@ -27,7 +27,7 @@ router.get("/", (req, res) => {
     res.json(products);
 });
 
-// Ruta GET: Obtener un producto por ID
+
 router.get("/:pid", (req, res) => {
     const products = getProducts();
     const product = products.find(p => p.id === parseInt(req.params.pid));
@@ -38,7 +38,7 @@ router.get("/:pid", (req, res) => {
     res.json(product);
 });
 
-// Ruta POST: Agregar un nuevo producto
+
 router.post("/", (req, res) => {
     const products = getProducts();
     const { title, description, code, price, stock, category, thumbnails } = req.body;
