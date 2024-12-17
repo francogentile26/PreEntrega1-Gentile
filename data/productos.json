@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Camiseta de Belgrano",
+    "description": "Camiseta oficial temporada 2024",
+    "code": "BEL2024",
+    "price": 15000,
+    "status": true,
+    "stock": 50,
+    "category": "indumentaria",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Camiseta de Belgrano",
+    "description": "Camiseta oficial temporada 2024",
+    "code": "BEL2024",
+    "price": 15000,
+    "status": true,
+    "stock": 50,
+    "category": "indumentaria",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ]
+  }
+]
